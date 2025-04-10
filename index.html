@@ -4,142 +4,223 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>전문보고서</title>
+    <title>전문보고서 자료실 | 한국인공지능협회</title>
+    <meta name="description" content="한국인공지능협회 전문보고서 자료실 | 인공지능 관련 최신 연구보고서, 정책자료 및 전문서적을 확인하세요.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="전문보고서 자료실 | 한국인공지능협회">
+    <meta property="og:description" content="연구자료 및 정책문서를 검색하고 다운로드 할 수 있는 자료실입니다.">
+    <meta name="twitter:title" content="전문보고서 자료실 | 한국인공지능협회">
+    <meta name="twitter:description" content="연구자료 및 정책문서를 검색하고 다운로드 할 수 있는 자료실입니다.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:image" content="/img/ogimage25.png">
+    <meta name="twitter:image" content="/image.png">
+    <link href="https://framerusercontent.com/images/yHL6S80IssKYxSTQMOG4ilm6ck.png" rel="icon" media="(prefers-color-scheme: light)">
+    <link href="https://framerusercontent.com/images/yHL6S80IssKYxSTQMOG4ilm6ck.png" rel="icon" media="(prefers-color-scheme: dark)">
+
     <link rel="stylesheet" href="styles.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            background-color: #f4f4f4;
-            color: #333;
-        }
+body {
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.7;
+    background-color: #f8f9fa;
+    color: #212529;
+    margin: 0;
+    padding: 0;
+}
 
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
 
-        h1 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 2.5rem;
+    letter-spacing: -0.5px;
+}
 
-        .search-container {
-            display: flex;
-            margin-bottom: 20px;
-        }
+.search-container {
+    display: flex;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+    overflow: hidden;
+}
 
-        #searchInput {
-            flex: 1;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 4px 0 0 4px;
-            font-size: 16px;
-        }
+#searchInput {
+    flex: 1;
+    padding: 14px 16px;
+    border: 1px solid #e0e0e0;
+    border-right: none;
+    border-radius: 6px 0 0 6px;
+    font-size: 15px;
+    transition: border-color 0.2s;
+    outline: none;
+}
 
-        #searchBtn {
-            padding: 10px 20px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 0 4px 4px 0;
-            cursor: pointer;
-            font-size: 16px;
-        }
+#searchInput:focus {
+    border-color: #3498db;
+    box-shadow: inset 0 0 0 1px rgba(52, 152, 219, 0.3);
+}
 
-        #searchBtn:hover {
-            background-color: #45a049;
-        }
+#searchBtn {
+    padding: 14px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 0 6px 6px 0;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
 
-        .category-tabs {
-            display: flex;
-            margin-bottom: 20px;
-            overflow-x: auto;
-        }
+#searchBtn:hover {
+    background-color: #2980b9;
+}
 
-        .tab {
-            padding: 10px 20px;
-            background-color: #f1f1f1;
-            border: none;
-            cursor: pointer;
-            transition: background-color 0.3s;
-            margin-right: 5px;
-        }
+.category-tabs {
+    display: flex;
+    margin-bottom: 25px;
+    overflow-x: auto;
+    padding-bottom: 5px;
+    scrollbar-width: thin;
+}
 
-        .tab:hover {
-            background-color: #ddd;
-        }
+.category-tabs::-webkit-scrollbar {
+    height: 4px;
+}
 
-        .tab.active {
-            background-color: #4CAF50;
-            color: white;
-        }
+.category-tabs::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 4px;
+}
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-            background-color: white;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
+.tab {
+    padding: 12px 24px;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-right: 10px;
+    font-weight: 500;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
 
-        th,
-        td {
-            padding: 12px 15px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-        }
+.tab:hover {
+    background-color: #f2f2f2;
+    transform: translateY(-1px);
+}
 
-        th {
-            background-color: #f2f2f2;
-            font-weight: bold;
-        }
+.tab.active {
+    background-color: #3498db;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(52, 152, 219, 0.2);
+}
 
-        tr:hover {
-            background-color: #f5f5f5;
-        }
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 25px;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    overflow: hidden;
+}
 
-        .download-link {
-            color: #4CAF50;
-            text-decoration: none;
-        }
+th, td {
+    padding: 16px 18px;
+    text-align: left;
+    border-bottom: 1px solid #eaeaea;
+}
 
-        .download-link:hover {
-            text-decoration: underline;
-        }
+th {
+    background-color: #f9f9f9;
+    font-weight: 600;
+    color: #2c3e50;
+    white-space: nowrap;
+}
 
-        /* 페이지네이션 스타일 */
-        .pagination {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-            gap: 5px;
-        }
+/* Date column specifically */
+th:nth-child(3), td:nth-child(3) {
+    white-space: nowrap;
+    width: 120px;
+}
 
-        .page-btn {
-            padding: 8px 12px;
-            background-color: #f1f1f1;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
+tr:last-child td {
+    border-bottom: none;
+}
 
-        .page-btn:hover {
-            background-color: #ddd;
-        }
+tr:hover {
+    background-color: #f8fcff;
+}
 
-        .page-btn.active {
-            background-color: #4CAF50;
-            color: white;
-        }
+.download-link {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 4px;
+    background-color: rgba(52, 152, 219, 0.1);
+}
 
-        .page-btn:disabled {
-            cursor: not-allowed;
-            opacity: 0.5;
-        }
+.download-link:hover {
+    color: #2980b9;
+    background-color: rgba(52, 152, 219, 0.15);
+    text-decoration: none;
+}
+
+/* 페이지네이션 스타일 */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 8px;
+}
+
+.page-btn {
+    padding: 10px 16px;
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-weight: 500;
+    min-width: 40px;
+    text-align: center;
+}
+
+.page-btn:hover {
+    background-color: #f8f9fa;
+    border-color: #ccc;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.page-btn.active {
+    background-color: #3498db;
+    color: white;
+    border-color: #3498db;
+    box-shadow: 0 2px 6px rgba(52, 152, 219, 0.3);
+}
+
+.page-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+    background-color: #f8f9fa;
+    transform: none;
+    box-shadow: none;
+}
     </style>
 </head>
 
