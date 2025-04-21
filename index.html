@@ -14,251 +14,56 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta property="og:image" content="https://github.com/startups-koraia/koraia_serach/blob/main/image.png?raw=true">
     <meta name="twitter:image" content="https://github.com/startups-koraia/koraia_serach/blob/main/image.png?raw=true">
-    <link href="https://framerusercontent.com/images/yHL6S80IssKYxSTQMOG4ilm6ck.png" rel="icon" media="(prefers-color-scheme: light)">
-    <link href="https://framerusercontent.com/images/yHL6S80IssKYxSTQMOG4ilm6ck.png" rel="icon" media="(prefers-color-scheme: dark)">
+    <link href="https://framerusercontent.com/images/yHL6S80IssKYxSTQMOG4ilm6ck.png" rel="icon"
+        media="(prefers-color-scheme: light)">
+    <link href="https://framerusercontent.com/images/yHL6S80IssKYxSTQMOG4ilm6ck.png" rel="icon"
+        media="(prefers-color-scheme: dark)">
+    
 
     <link rel="stylesheet" href="styles.css">
-    <style>
-body {
-    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    line-height: 1.7;
-    background-color: #f8f9fa;
-    color: #212529;
-    margin: 0;
-    padding: 0;
-}
 
-.container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 30px 20px;
-}
-
-h1 {
-    text-align: center;
-    margin-bottom: 30px;
-    font-weight: 600;
-    color: #2c3e50;
-    font-size: 2.5rem;
-    letter-spacing: -0.5px;
-}
-
-.search-container {
-    display: flex;
-    margin-bottom: 25px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    border-radius: 6px;
-    overflow: hidden;
-}
-
-#searchInput {
-    flex: 1;
-    padding: 14px 16px;
-    border: 1px solid #e0e0e0;
-    border-right: none;
-    border-radius: 6px 0 0 6px;
-    font-size: 15px;
-    transition: border-color 0.2s;
-    outline: none;
-}
-
-#searchInput:focus {
-    border-color: #3498db;
-    box-shadow: inset 0 0 0 1px rgba(52, 152, 219, 0.3);
-}
-
-#searchBtn {
-    padding: 14px 20px;
-    background-color: #3498db;
-    color: white;
-    border: none;
-    border-radius: 0 6px 6px 0;
-    cursor: pointer;
-    font-size: 15px;
-    font-weight: 500;
-    transition: background-color 0.2s;
-}
-
-#searchBtn:hover {
-    background-color: #2980b9;
-}
-
-.category-tabs {
-    display: flex;
-    margin-bottom: 25px;
-    overflow-x: auto;
-    padding-bottom: 5px;
-    scrollbar-width: thin;
-}
-
-.category-tabs::-webkit-scrollbar {
-    height: 4px;
-}
-
-.category-tabs::-webkit-scrollbar-thumb {
-    background-color: #ccc;
-    border-radius: 4px;
-}
-
-.tab {
-    padding: 12px 24px;
-    background-color: #ffffff;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: all 0.2s;
-    margin-right: 10px;
-    font-weight: 500;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-}
-
-.tab:hover {
-    background-color: #f2f2f2;
-    transform: translateY(-1px);
-}
-
-.tab.active {
-    background-color: #3498db;
-    color: white;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(52, 152, 219, 0.2);
-}
-
-table {
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 0;
-    margin-top: 25px;
-    background-color: white;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-th, td {
-    padding: 16px 18px;
-    text-align: left;
-    border-bottom: 1px solid #eaeaea;
-}
-
-th {
-    background-color: #f9f9f9;
-    font-weight: 600;
-    color: #2c3e50;
-    white-space: nowrap;
-}
-
-/* Date column specifically */
-th:nth-child(3), td:nth-child(3) {
-    white-space: nowrap;
-    width: 120px;
-}
-
-tr:last-child td {
-    border-bottom: none;
-}
-
-tr:hover {
-    background-color: #f8fcff;
-}
-
-.download-link {
-    color: #3498db;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.2s;
-    display: inline-block;
-    padding: 6px 12px;
-    border-radius: 4px;
-    background-color: rgba(52, 152, 219, 0.1);
-}
-
-.download-link:hover {
-    color: #2980b9;
-    background-color: rgba(52, 152, 219, 0.15);
-    text-decoration: none;
-}
-
-/* 페이지네이션 스타일 */
-.pagination {
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-    gap: 8px;
-}
-
-.page-btn {
-    padding: 10px 16px;
-    background-color: white;
-    border: 1px solid #e0e0e0;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: all 0.2s;
-    font-weight: 500;
-    min-width: 40px;
-    text-align: center;
-}
-
-.page-btn:hover {
-    background-color: #f8f9fa;
-    border-color: #ccc;
-    transform: translateY(-1px);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-}
-
-.page-btn.active {
-    background-color: #3498db;
-    color: white;
-    border-color: #3498db;
-    box-shadow: 0 2px 6px rgba(52, 152, 219, 0.3);
-}
-
-.page-btn:disabled {
-    cursor: not-allowed;
-    opacity: 0.5;
-    background-color: #f8f9fa;
-    transform: none;
-    box-shadow: none;
-}
-    </style>
 </head>
 
 <body>
     <div class="container">
-        <h1>전문 보고서 </h1>
+        <h1>전문 보고서</h1>
 
         <div class="search-container">
-            <input type="text" id="searchInput" placeholder="Search files...">
-            <button id="searchBtn">Search</button>
+            <input type="text" id="searchInput" placeholder="검색어 입력...">
+            <button id="searchBtn">검색</button>
         </div>
 
         <div class="category-tabs">
-            <button class="tab active" data-type="all">All</button>
+            <button class="tab active" data-type="all">전체</button>
             <button class="tab" data-type="pdf">PDF</button>
             <button class="tab" data-type="hwp">HWP</button>
             <button class="tab" data-type="기타">기타</button>
-            <!-- <button class="tab" data-type="css">CSS</button> -->
         </div>
 
-        <table id="fileTable">
-            <thead>
-                <tr>
-                    <th>파일명</th>
-                    <th>file type</th>
-                    <th>Date</th>
-                    <th>file size (MB)</th>
-                    <th>Link</th>
-                </tr>
-            </thead>
-            <tbody id="fileTableBody">
-                <!-- Files will be displayed here -->
-            </tbody>
-        </table>
+        <div class="table-container">
+            <table id="fileTable">
+                <thead>
+                    <tr>
+                        <th>파일명</th>
+                        <th>설명</th>
+                        <th>형식</th>
+                        <th>날짜</th>
+                        <th>크기(MB)</th>
+                        <th>링크</th>
+                    </tr>
+                </thead>
+                <tbody id="fileTableBody">
+                    <!-- 여기에 파일 목록이 표시됩니다 -->
+                    <tr>
+                        <td colspan="6" class="loading">데이터 로딩 중</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
-        <!-- 페이지 네비게이션 추가 -->
+        <!-- 페이지 네비게이션 -->
         <div class="pagination" id="pagination">
-            <!-- 페이지 버튼이 여기에 들어갑니다 -->
+            <!-- 페이지 버튼이 여기에 표시됩니다 -->
         </div>
     </div>
 
@@ -274,23 +79,52 @@ tr:hover {
             const pagination = document.getElementById('pagination');
             let currentFilter = 'all';
 
-            // 페이징 관련 변수 추가
-            const itemsPerPage = 20; // 페이지당 표시할 아이템 수
-            let currentPage = 1;     // 현재 페이지
-            let totalPages = 1;      // 전체 페이지 수
+            // 페이징 관련 변수
+            const itemsPerPage = getItemsPerPage(); // 화면 크기에 따라 페이지당 아이템 수 조정
+            let currentPage = 1;
+            let totalPages = 1;
 
-            // Fetch file data
+            // 화면 크기에 따라 페이지당 아이템 수 설정
+            function getItemsPerPage() {
+                return window.innerWidth <= 768 ? 10 : 20;
+            }
+
+            // 화면 크기 변경 감지
+            window.addEventListener('resize', function () {
+                const newItemsPerPage = getItemsPerPage();
+                if (newItemsPerPage !== itemsPerPage) {
+                    // 페이지당 아이템 수가 변경되면 페이지 재계산
+                    updatePagination();
+                    displayFiles(filteredFiles);
+                }
+            });
+
+            // 파일 데이터 가져오기
             fetch('files.json')
-                .then(response => response.json())
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('파일 데이터를 불러오는데 실패했습니다.');
+                    }
+                    return response.json();
+                })
                 .then(data => {
                     files = data;
                     filteredFiles = [...files];
                     updatePagination();
                     displayFiles(filteredFiles);
                 })
-                .catch(error => console.error('Error loading file data:', error));
+                .catch(error => {
+                    console.error('Error loading file data:', error);
+                    fileTableBody.innerHTML = `
+                        <tr>
+                            <td colspan="6" class="no-results">
+                                데이터를 불러오는데 문제가 발생했습니다. 잠시 후 다시 시도해주세요.
+                            </td>
+                        </tr>
+                    `;
+                });
 
-            // Search functionality
+            // 검색 기능
             searchBtn.addEventListener('click', performSearch);
             searchInput.addEventListener('keypress', function (e) {
                 if (e.key === 'Enter') {
@@ -298,7 +132,7 @@ tr:hover {
                 }
             });
 
-            // Category filtering
+            // 탭 필터링
             tabs.forEach(tab => {
                 tab.addEventListener('click', function () {
                     tabs.forEach(t => t.classList.remove('active'));
@@ -312,13 +146,15 @@ tr:hover {
             function performSearch() {
                 const searchTerm = searchInput.value.toLowerCase().trim();
 
-                // Reset if search is empty
+                // 검색어가 비어있으면 전체 표시
                 if (searchTerm === '') {
                     filteredFiles = [...files];
                 } else {
-                    filteredFiles = files.filter(file =>
-                        file.filename.toLowerCase().includes(searchTerm)
-                    );
+                    filteredFiles = files.filter(file => {
+                        const filename = file.filename ? file.filename.toLowerCase() : '';
+                        const description = file.description ? file.description.toLowerCase() : '';
+                        return filename.includes(searchTerm) || description.includes(searchTerm);
+                    });
                 }
 
                 currentPage = 1; // 검색시 첫 페이지로 이동
@@ -329,25 +165,24 @@ tr:hover {
                 let result = [...filteredFiles];
 
                 if (currentFilter !== 'all') {
-                    console.log('Current filter:', currentFilter);
-
                     if (currentFilter === '기타') {
                         // 기타 - PDF와 HWP/HWPX 외의 모든 파일
                         result = result.filter(file => {
-                            const fileType = file.type.toLowerCase();
+                            const fileType = file.type ? file.type.toLowerCase() : '';
                             return fileType !== 'pdf' && fileType !== 'hwp' && fileType !== 'hwpx';
                         });
                     } else if (currentFilter === 'hwp') {
                         // HWP 탭 - HWP와 HWPX 포함
                         result = result.filter(file => {
-                            const fileType = file.type.toLowerCase();
+                            const fileType = file.type ? file.type.toLowerCase() : '';
                             return fileType === 'hwp' || fileType === 'hwpx';
                         });
                     } else {
                         // 그 외 탭 (PDF 등)
-                        result = result.filter(file =>
-                            file.type.toLowerCase() === currentFilter.toLowerCase()
-                        );
+                        result = result.filter(file => {
+                            const fileType = file.type ? file.type.toLowerCase() : '';
+                            return fileType === currentFilter.toLowerCase();
+                        });
                     }
                 }
 
@@ -362,6 +197,10 @@ tr:hover {
 
                 // 페이지 버튼 생성
                 pagination.innerHTML = '';
+
+                // 모바일에서는 간소화된 페이지네이션
+                const isMobile = window.innerWidth <= 480;
+                const maxVisibleButtons = isMobile ? 3 : 5;
 
                 // 이전 페이지 버튼
                 if (totalPages > 1) {
@@ -379,8 +218,7 @@ tr:hover {
                     pagination.appendChild(prevBtn);
                 }
 
-                // 페이지 번호 버튼 (제한된 수만 표시)
-                const maxVisibleButtons = 5; // 한 번에 표시할 페이지 버튼 수
+                // 페이지 번호 버튼
                 let startPage = Math.max(1, currentPage - Math.floor(maxVisibleButtons / 2));
                 let endPage = Math.min(totalPages, startPage + maxVisibleButtons - 1);
 
@@ -389,7 +227,7 @@ tr:hover {
                     startPage = Math.max(1, endPage - maxVisibleButtons + 1);
                 }
 
-                // 첫 페이지 버튼 (항상 표시)
+                // 첫 페이지 버튼 (필요시)
                 if (startPage > 1) {
                     const firstBtn = document.createElement('button');
                     firstBtn.textContent = '1';
@@ -404,18 +242,17 @@ tr:hover {
                     });
                     pagination.appendChild(firstBtn);
 
-                    // 첫 페이지와 시작 페이지 사이에 간격이 있는 경우 생략 표시
+                    // 생략 표시
                     if (startPage > 2) {
                         const ellipsis = document.createElement('span');
                         ellipsis.textContent = '...';
-                        ellipsis.style.margin = '0 5px';
+                        ellipsis.classList.add('ellipsis');
                         pagination.appendChild(ellipsis);
                     }
                 }
 
-                // 중간 페이지 버튼들
+                // 중간 페이지 버튼
                 for (let i = startPage; i <= endPage; i++) {
-                    // 첫 페이지와 마지막 페이지는 별도로 처리하므로 건너뜀
                     if ((i === 1 && startPage === 1) || (i === totalPages && endPage === totalPages)) {
                         continue;
                     }
@@ -435,13 +272,13 @@ tr:hover {
                     pagination.appendChild(pageBtn);
                 }
 
-                // 마지막 페이지 버튼 (항상 표시)
+                // 마지막 페이지 버튼 (필요시)
                 if (endPage < totalPages) {
-                    // 마지막 페이지와 끝 페이지 사이에 간격이 있는 경우 생략 표시
+                    // 생략 표시
                     if (endPage < totalPages - 1) {
                         const ellipsis = document.createElement('span');
                         ellipsis.textContent = '...';
-                        ellipsis.style.margin = '0 5px';
+                        ellipsis.classList.add('ellipsis');
                         pagination.appendChild(ellipsis);
                     }
 
@@ -476,20 +313,20 @@ tr:hover {
                 }
             }
 
-            // Replace the displayFiles function in your script
+            // 파일 표시 함수
             function displayFiles(filesToShow) {
                 fileTableBody.innerHTML = '';
 
                 if (filesToShow.length === 0) {
                     const row = document.createElement('tr');
                     row.innerHTML = `
-            <td colspan="5" style="text-align: center;">No files found</td>
-        `;
+                        <td colspan="6" class="no-results">검색 결과가 없습니다</td>
+                    `;
                     fileTableBody.appendChild(row);
                     return;
                 }
 
-                // Sort files by date in descending order (newest first)
+                // 날짜 기준 내림차순 정렬 (최신순)
                 filesToShow.sort((a, b) => {
                     if (!a.date) return 1;
                     if (!b.date) return -1;
@@ -503,22 +340,23 @@ tr:hover {
 
                 currentPageFiles.forEach(file => {
                     const row = document.createElement('tr');
-                    // Format the date nicely if it exists
-                    const dateDisplay = file.date ? new Date(file.date).toLocaleDateString() : '-';
+                    // 날짜 포맷팅
+                    const dateDisplay = file.date ? new Date(file.date).toLocaleDateString('ko-KR') : '-';
+                    // 설명이 있으면 표시, 없으면 빈칸
+                    const descriptionDisplay = file.description ? file.description : '';
 
                     row.innerHTML = `
-            <td>${file.filename}</td>
-            <td>${file.type}</td>
-            <td>${dateDisplay}</td>
-            <td>${file.size}</td>
-            <td><a href="${file.link}" class="download-link" target="_blank">Download</a></td>
-        `;
+                        <td>${file.filename || '-'}</td>
+                        <td>${descriptionDisplay}</td>
+                        <td>${file.type || '-'}</td>
+                        <td>${dateDisplay}</td>
+                        <td>${file.size || '-'}</td>
+                        <td><a href="${file.link}" class="download-link" target="_blank" rel="noopener">보기</a></td>
+                    `;
                     fileTableBody.appendChild(row);
                 });
             }
         });
-
-
     </script>
 
 </body>

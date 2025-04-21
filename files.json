@@ -1,5 +1,13 @@
 [
     {
+        "filename": "ai-agent-r.pdf",
+        "type": "pdf",
+        "description": "딜로이트의 『AI 에이전트 설계전략』은 단일 LLM의 한계를 넘어, 복잡한 워크플로우를 지원하는 다중 전문 에이전트 시스템의 필요성과 설계 원칙을 다룹니다. 산업 적용 가능성, 협업 모델, 참조 아키텍처 등 실무 전략 관점에서 유용한 자료입니다.",
+        "size": 3.3,
+        "date": "2025-04-21",
+        "link": "https://drive.google.com/file/d/1ZzBPFCc96y2L1oTCx9lwj7Hvruh4xHL5/view?usp=drive_link"
+    },
+    {
         "filename": "hai_ai_index_report_2025.pdf",
         "type": "pdf",
         "size": 29.4,
@@ -421,7 +429,7 @@
     },
     {
         "filename": "(붙임2)_2024년_초거대AI데이터구축_지정공모_후보데이터(안)_57종_f.xlsx",
-        "type": "sheet",
+        "type": "xlsx",
         "size": 0,
         "date": "2024-01-01",
         "link": "https://docs.google.com/spreadsheets/d/1PMZOjRefN3pf-bdzdTyruY6y2wtkL_-c/edit?usp=drivesdk&ouid=114219870301307530991&rtpof=true&sd=true"
@@ -680,7 +688,7 @@
     },
     {
         "filename": "AI Advisory Body _ United Nations_AI 자문 기구.docx",
-        "type": "document",
+        "type": "word",
         "size": 1.1,
         "date": "2024-01-01",
         "link": "https://docs.google.com/document/d/14_ILa84OZRFae3kI_AA_w5hu_r1wbu0z/edit?usp=drivesdk&ouid=114219870301307530991&rtpof=true&sd=true"
@@ -736,7 +744,7 @@
     },
     {
         "filename": "GPTV_System_Card ko.pptx",
-        "type": "presentation",
+        "type": "ppt",
         "size": 3.2,
         "date": "2024-01-01",
         "link": "https://docs.google.com/presentation/d/1bawffG_IGblN-0yafuzQwqaA7zFYDyJ3/edit?usp=drivesdk&ouid=114219870301307530991&rtpof=true&sd=true"
@@ -785,7 +793,7 @@
     },
     {
         "filename": "3. 23년 하반기 DC 서비스 소개(인공지능사업단).pptx",
-        "type": "presentation",
+        "type": "ppt",
         "size": 4.8,
         "date": "2024-01-01",
         "link": "https://docs.google.com/presentation/d/1pP_8bMrbQslj4xD3f0N_bbyGSppkxXu8/edit?usp=drivesdk&ouid=114219870301307530991&rtpof=true&sd=true"
@@ -1520,7 +1528,7 @@
     },
     {
         "filename": "23년_AI_지정공모과제_후보데이터(안)_140종.xlsx",
-        "type": "sheet",
+        "type": "xlsx",
         "size": 0,
         "date": "2024-01-01",
         "link": "https://docs.google.com/spreadsheets/d/1DbWtHZWbI4NYeyiE6fHFB4SelbzNd6gV/edit?usp=drivesdk&ouid=114219870301307530991&rtpof=true&sd=true"
